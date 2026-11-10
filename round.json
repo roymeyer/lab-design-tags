@@ -1,0 +1,144 @@
+{
+ "round": "20261110-1844",
+ "rules": [
+  "Fill only what the product's photos or its text show. Never guess and never invent: leave a part empty when it is not visible or not stated.",
+  "Pick tags from the catalogue, on their path. Tags waiting for approval may be used too.",
+  "A tag the catalogue lacks goes in new_tags only, with its full path (e.g. Trims and details > Drawcord > Ends > Aglet), the words the shop uses and why.",
+  "Tags are lower-case kebab-case (braided-round-cord). Sizes in mm only when the shop states them.",
+  "A trim's parts follow the catalogue: a drawcord has Cord, Ends, Exit, Stopper; in each part's note write what is visible: material, colour, finish, design (e.g. metal · gun black · matt · flat edge, rounded body).",
+  "Each art is its own entry: its side, its position, its graphic, font and technique. dtm: true when the art is the fabric's colour (tone-on-tone).",
+  "photos_to_delete: suggest photos that add nothing (duplicates, no product, unrelated). They are only suggestions: nothing is deleted.",
+  "Answer with one JSON block exactly in the answer format, every job of this round in it, nothing else in the block."
+ ],
+ "answer_format": {
+  "jobs": [
+   {
+    "job": "<the job id exactly as given>",
+    "fit": [
+     "<tags from Fit>"
+    ],
+    "fabrics": [
+     {
+      "fabric": "<a tag from Fabric > Woven/Knitted/…>",
+      "fibres": [
+       {
+        "fibre": "<tag from Fabric > Fiber>",
+        "pct": 100
+       }
+      ],
+      "yarn": [
+       "<tags from Fabric > Yarn>"
+      ],
+      "gsm": "<only if stated>"
+     }
+    ],
+    "arts": [
+     {
+      "side": "front | back | side",
+      "position": "<tag from Arts > Position>",
+      "graphic": [
+       "<Arts > Graphic>"
+      ],
+      "font": [
+       "<Arts > Font>"
+      ],
+      "technique": [
+       "<Arts > Technique>"
+      ],
+      "dtm": false
+     }
+    ],
+    "treatments": [
+     "<tags from Treatments>"
+    ],
+    "trims": [
+     {
+      "item": "<e.g. drawcord>",
+      "parts": {
+       "Cord": {
+        "type": "<tag from that part>",
+        "size": "<mm, only if stated>",
+        "note": "<material, colour, finish, design…>"
+       }
+      },
+      "tags": [
+       "<free words that describe it>"
+      ]
+     }
+    ],
+    "construction": [
+     "<tags from Construction>"
+    ],
+    "new_tags": [
+     {
+      "path": "Trims and details > Drawcord > Ends > Aglet",
+      "tag": "<kebab-case>",
+      "words": [
+       "<how the shop writes it>"
+      ],
+      "why": "<what shows it>"
+     }
+    ],
+    "photos_to_delete": [
+     {
+      "photo": "<the photo's address>",
+      "why": "<duplicate, no product, close-up that adds no tag…>"
+     }
+    ],
+    "evidence": "<which words or photos each choice rests on>",
+    "could_not_tell": "<what the photos and text do not show>"
+   }
+  ]
+ },
+ "jobs": [
+  {
+   "job": "maniajeans.co.il|11004629254455",
+   "brand": "Mania Jeans",
+   "name": "פוטר קפוצון עם רוכסן לגבר",
+   "colour": "",
+   "colours": [
+    "11004629254455"
+   ],
+   "category": "SWEATSHIRTS & HOODIES",
+   "composition": "",
+   "price": 329.9,
+   "currency": "ILS",
+   "link": "https://www.maniajeans.co.il/products/4f022-c7",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F022-C7-1.jpg?v=1791712846",
+    "http://www.maniajeans.co.il/cdn/shop/files/e659815beaf1e814361000712b3933af_7421af22-2dbc-460f-9d14-e3534473e150.webp?v=1793524902",
+    "https://www.maniajeans.co.il/cdn/shop/files/e659815beaf1e814361000712b3933af_7421af22-2dbc-460f-9d14-e3534473e150.webp?v=1793524902"
+   ],
+   "text": "רשת Mania Jeans פונה לגברים מובילי אופנה ומציעה קולקציות הכוללות מגוון רחב של פריטים ליום ולערב. בקרו באתר לרכישת בגדי גברים והזמינו אונליין עם שליח עד הבית."
+  },
+  {
+   "job": "yn10565.com|25986·MAROON",
+   "brand": "YN® 10.56.5",
+   "name": "OVERSIZED GRAPHIC T-SHIRT T0146",
+   "colour": "MAROON",
+   "colours": [
+    "BLACK",
+    "BLUE",
+    "BROWN",
+    "MAROON",
+    "STONE"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "Cotton",
+   "price": 249.0,
+   "currency": "ILS",
+   "link": "https://yn10565.com/product/oversized-graphic-t-shirt-t0146/",
+   "photos": [
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146.jpeg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-7.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-9.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0175-BLACK-4.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-2.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-3.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-4.jpg",
+    "https://yn10565.com/wp-content/uploads/2025/10/T0146-5.jpg"
+   ],
+   "text": "OVERSIZED GRAPHIC T-SHIRT\nחולצת טי-שירט בגזרת אוברסייז רחבה ומשוחררת שיושבת מעולה על הגוף. עשויה מבד כותנה איכותי, רך ונעים למגע. מעוצבת עם רקמת לוגו 10.56.5 קטנה במרכז החזה ודיסטרויז עדינים בכתף ובמכפלת. כוללת תווית ממותגת עדינה על השרוול שמוסיפה נגיעה אורבנית נקייה. פריט קליל ליום-יום שסוגר לך את הלוק בסטייל.\n: OVERSIZED GRAPHIC T-SHIRT\nחולצת טי-שירט בגזרת אוברסייז רחבה ומשוחררת שיושבת מעולה על הגוף\n. עשויה מבד כותנה איכותי, רך ונעים למגע\n. מעוצבת עם רקמת לוגו 10.56.5 קטנה במרכז החזה ודיסטרויז עדינים בכתף ובמכפלת\n. כוללת תווית ממותגת עדינה על השרוול שמוסיפה נגיעה אורבנית נקייה\n. פריט קליל ליום-יום שסוגר לך את הלוק בסטייל"
+  }
+ ]
+}

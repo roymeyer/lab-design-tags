@@ -1,0 +1,3655 @@
+[
+ {
+  "path": "Arts > Font",
+  "tag": "baroque",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Font",
+  "tag": "collegiate",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font",
+  "tag": "script",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "block",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "bubble",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "gothic",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "graffiti",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "handwritten",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "outline",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "retro",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "sans-serif",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "serif",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "stencil",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "typewriter",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Font > Style",
+  "tag": "varsity",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "all-over-pattern",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "architecture",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "camo",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "check",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "crest",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "floral",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "geometric",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "ikat",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "illustration",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "logo",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "monogram",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "ombre",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "paint-splatter",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "paisley",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "plain",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "side-stripes",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "stripes",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "text",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "two-tone",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "typography",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic",
+  "tag": "zebra",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "cartoon",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "flame",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "heart",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "photo-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "skull",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Motif",
+  "tag": "star",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "abstract",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "animal-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "checkerboard",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "color-block",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "gingham",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "houndstooth",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "leopard",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "pinstripe",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "plaid",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "polka-dot",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "tie-dye-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Pattern",
+  "tag": "tropical",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Text",
+  "tag": "slogan",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Graphic > Text",
+  "tag": "varsity-number",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "back",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "back-neck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "chest",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "front",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "hem",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "hip",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "shoulders",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "sleeve",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position",
+  "tag": "upper-back",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Back",
+  "tag": "full-back",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Back",
+  "tag": "lower-back",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Front",
+  "tag": "centre-chest",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Front",
+  "tag": "full-front",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Front",
+  "tag": "left-chest",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Front",
+  "tag": "pocket",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Front",
+  "tag": "right-chest",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Legs and waist",
+  "tag": "back-pocket",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Legs and waist",
+  "tag": "left-leg",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Legs and waist",
+  "tag": "right-leg",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Legs and waist",
+  "tag": "side-seam",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Legs and waist",
+  "tag": "waistband",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Neck and hood",
+  "tag": "collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Neck and hood",
+  "tag": "hood",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Neck and hood",
+  "tag": "inside-neck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Sleeves",
+  "tag": "cuff",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Sleeves",
+  "tag": "left-sleeve",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Position > Sleeves",
+  "tag": "right-sleeve",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "applique",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "chenille",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "crystals",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "dtg",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "embossed",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "embroidery",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "faded-screen-print",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "jacquard",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "patch",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "raised-embroidery",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "raw-edge",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "rubber-print",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "screen-print",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique",
+  "tag": "woven-label",
+  "status": "approved"
+ },
+ {
+  "path": "Arts > Technique > Embellishment",
+  "tag": "applique",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Embellishment",
+  "tag": "beading",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Embellishment",
+  "tag": "sequins",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Embroidery",
+  "tag": "chain-stitch-embroidery",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Embroidery",
+  "tag": "tonal-embroidery",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Embroidery",
+  "tag": "tufting",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "discharge-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "flock-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "foil-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "glitter-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "hand-painted",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "heat-transfer",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "high-density-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "puff-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "reflective-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "silicone-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "sublimation",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "water-based-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Surface",
+  "tag": "debossed",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Surface",
+  "tag": "laser-etched",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours",
+  "tag": "beige",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "black",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "blue",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "brown",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "burgundy",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "camel",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "charcoal",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "cream",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "ecru",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "gold",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "green",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "grey",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "khaki",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "light-blue",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "mint",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "mocha",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "multicolour",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "mustard",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "navy",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "olive",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "orange",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "peach",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "pink",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "purple",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "red",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "silver",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "stone",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "turquoise",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "white",
+  "status": "approved"
+ },
+ {
+  "path": "Colours",
+  "tag": "yellow",
+  "status": "approved"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "cobalt",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "coral",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "forest-green",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "fuchsia",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "lavender",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "lilac",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "maroon",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "rust",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "sage",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "sky-blue",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Colours",
+  "tag": "teal",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Neutrals",
+  "tag": "bone",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Neutrals",
+  "tag": "chocolate",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Neutrals",
+  "tag": "off-white",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Neutrals",
+  "tag": "sand",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Colours > Neutrals",
+  "tag": "taupe",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "back-darts",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "button-down",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "camp-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "chunky-sole",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "clean-front-placket",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "cork-footbed",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "crew-neck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "curved-brim",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "curved-hem",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "cushioned-insole",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "distressed",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "double-strap",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "drawstring-waist",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "elastic-cuffs",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "elastic-waist",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "five-pocket",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "front-pleat",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "gum-sole",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "hood",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "lace-up",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "lined-hood",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "notched-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "padded",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "panelling",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "pin-tuck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "piping",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "platform-sole",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "point-collar",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "pressed-crease",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "raglan-sleeves",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "rounded-toe",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "rubber-sole",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "seam-lines",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "sleeve-stripes",
+  "status": "approved"
+ },
+ {
+  "path": "Construction",
+  "tag": "stand-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "tie-waist",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "topstitching",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "two-layer",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction",
+  "tag": "whipstitch",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "mock-neck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "notch-lapel",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "peak-lapel",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "polo-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "shawl-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "spread-collar",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Collar",
+  "tag": "v-neck",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Hem",
+  "tag": "raw-hem",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Hem",
+  "tag": "rolled-hem",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Hem",
+  "tag": "side-slits",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Hem",
+  "tag": "turn-up-cuffs",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Lining",
+  "tag": "half-lined",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Lining",
+  "tag": "lined",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Lining",
+  "tag": "quilted",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Lining",
+  "tag": "reversible",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Lining",
+  "tag": "unlined",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "bonded",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "contrast-stitching",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "double-needle-stitching",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "flatlock-seams",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "french-seams",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "overlock-seams",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Seams",
+  "tag": "set-in-sleeves",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Shaping",
+  "tag": "back-vent",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Shaping",
+  "tag": "box-pleat",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Shaping",
+  "tag": "darts",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Shaping",
+  "tag": "gusset",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Construction > Shaping",
+  "tag": "yoke",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Fabric",
+  "tag": "textured",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "acetate",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "acrylic",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "alpaca",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "bamboo",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "cashmere",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "cotton",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "cupro",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "elastane",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "elastomultiester",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "hemp",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "leather",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "linen",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "lyocell",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "metallic",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "modal",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "mohair",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "organic-cotton",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "polyamide",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "polyester",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "polypropylene",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "polyurethane",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "recycled-polyester",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "silk",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "viscose",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Fiber",
+  "tag": "wool",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > GSM",
+  "tag": "heavyweight",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > GSM",
+  "tag": "lightweight",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > GSM",
+  "tag": "midweight",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "brushed-fleece",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "french-terry",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "interlock",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "jacquard-knit",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "knit",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "loopback-terry",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "mercerized",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "mesh",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "perforated",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "pique",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "pointelle",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "ponte-roma",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "raschel-lace",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "rib",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "rib-1x1",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "rib-2x2",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "scuba",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "single-jersey",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "slub-jersey",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "thermal",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "towel",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "velour",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Knitted",
+  "tag": "waffle",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "coated-laminated",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "faux-leather",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "felt",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "fusible-interlining",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "leather",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "neoprene",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "pu-polyurethane",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "pvc",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "suede",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Non-woven",
+  "tag": "tyvek",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Seamless",
+  "tag": "circular-seamless",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Seamless",
+  "tag": "crochet",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Seamless",
+  "tag": "flat-knit-fully-fashioned",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Seamless",
+  "tag": "seamless-knit",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Seamless",
+  "tag": "whole-garment",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "boucle",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "canvas",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "chambray",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "corduroy",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "denim",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "dobby",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "drill",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "drill-chino",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "flannel",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "gabardine",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "herringbone",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "jacquard",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "organza",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "oxford",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "plain-weave",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "poplin",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "ripstop",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "satin-sateen",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "seersucker",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "taffeta",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "tweed",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "twill",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "velvet",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Woven",
+  "tag": "voile",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "combed-cotton",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "compact-yarn",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "gassed",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "melange",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "mercerized",
+  "status": "approved"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "open-end",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "ring-spun",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "slub",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "two-ply",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fabric > Yarn",
+  "tag": "waxed",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "barrel",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "bomber",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "bootcut",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "boxy",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "cargo",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "carpenter",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "cropped",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "drop-shoulder",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "elbow-length-sleeve",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "full-length",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "jogger",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "long-sleeve",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "muscle-fit",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "overshirt",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "oversized",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "pleated",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "regular-fit",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "relaxed",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "skinny",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "slim",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "straight",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "tapered",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "trucker",
+  "status": "approved"
+ },
+ {
+  "path": "Fit",
+  "tag": "wide-leg",
+  "status": "approved"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "above-knee",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "ankle-length",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "knee-length",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "longline",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "maxi",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "midi",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Length",
+  "tag": "mini",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Rise",
+  "tag": "high-rise",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Rise",
+  "tag": "low-rise",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Rise",
+  "tag": "mid-rise",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "athletic-fit",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "baggy",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "balloon",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "fitted",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "flared",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "loose-fit",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Silhouette",
+  "tag": "stretch-fit",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Sleeve",
+  "tag": "short-sleeve",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Sleeve",
+  "tag": "sleeveless",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Fit > Sleeve",
+  "tag": "three-quarter-sleeve",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "bleached",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "crinkled",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "faded-wash",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "hand-distressed",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "marbled",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "matte-finish",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Treatments",
+  "tag": "washed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "3d-crinkle",
+  "status": "approved",
+  "options": "resin"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "bleach-spots",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "destroyed",
+  "status": "approved",
+  "options": "rips, holes"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "dremel-distressed",
+  "status": "approved",
+  "options": "Dremel tool"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "frayed-hem",
+  "status": "approved",
+  "options": "raw edge"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "grinding",
+  "status": "approved",
+  "options": "hems, edges"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "hand-sanding",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "honeycombs",
+  "status": "approved",
+  "options": "back knee"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "laser-distressed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "paint-splatter",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "pp-spray",
+  "status": "approved",
+  "options": "potassium permanganate"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "repair-patches",
+  "status": "approved",
+  "options": "rip and repair"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "sand-blast",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "tacking",
+  "status": "approved",
+  "options": "3D creases"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "tinting",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Abrasion and distressing",
+  "tag": "whiskers",
+  "status": "approved",
+  "options": "hand / laser"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "cold-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "dip-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "garment-dyed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "ice-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "ombre",
+  "status": "approved",
+  "options": "gradient"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "overdyed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "pigment-dyed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "reactive-dyed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "resist-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "space-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Dye",
+  "tag": "tie-dye",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "anti-pill",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "bio-polished",
+  "status": "approved",
+  "options": "enzyme, anti-pill"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "brushed",
+  "status": "approved",
+  "options": "peached"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "burn-out",
+  "status": "approved",
+  "options": "devoré"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "coated",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "crinkled",
+  "status": "approved",
+  "options": "crush"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "flocked",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "garment-pressed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "glazed",
+  "status": "approved",
+  "options": "chintz"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "heat-set-pleats",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "pre-shrunk",
+  "status": "approved",
+  "options": "sanforized"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "sueded",
+  "status": "approved",
+  "options": "sanded"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "water-repellent",
+  "status": "approved",
+  "options": "DWR"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "waxed",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Surface finish",
+  "tag": "wrinkle-free",
+  "status": "approved",
+  "options": "easy care"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "acid-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "bleach-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "enzyme-stone-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "enzyme-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "garment-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "mineral-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "overdye-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "ozone-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "pigment-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "raw",
+  "status": "approved",
+  "options": "unwashed"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "rinse-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "sand-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "silicone-wash",
+  "status": "approved",
+  "options": "softener"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "snow-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "stone-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "tinted-wash",
+  "status": "approved",
+  "options": "dirty / yellowed"
+ },
+ {
+  "path": "Treatments > Wash",
+  "tag": "vintage-wash",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Finish",
+  "tag": "dtm",
+  "status": "approved",
+  "options": "dyed to match"
+ },
+ {
+  "path": "Trims and details > Button > Finish",
+  "tag": "engraved-logo",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Finish",
+  "tag": "glossy",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Finish",
+  "tag": "matte",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Finish",
+  "tag": "rim",
+  "status": "approved",
+  "options": "raised rim"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "coconut",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "corozo",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "fabric",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "horn",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "leather",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "metal",
+  "status": "approved",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "mother-of-pearl",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "resin",
+  "status": "approved",
+  "options": "polyester / urea"
+ },
+ {
+  "path": "Trims and details > Button > Material",
+  "tag": "wood",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "2-hole-button",
+  "status": "approved",
+  "measure": "size (ligne)"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "4-hole-button",
+  "status": "approved",
+  "measure": "size (ligne)"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "covered-button",
+  "status": "approved",
+  "measure": "size (ligne)",
+  "options": "self-fabric covered"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "frog-closure",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "knotted cord"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "jeans-tack-button",
+  "status": "approved",
+  "measure": "size (ligne)",
+  "options": "with tack, finish · metal"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "shank-button",
+  "status": "approved",
+  "measure": "size (ligne)"
+ },
+ {
+  "path": "Trims and details > Button > Shape",
+  "tag": "toggle-button",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "duffle / horn toggle"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "cam-buckle",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "d-ring",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "hook-and-eye",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "hook-and-loop",
+  "status": "approved",
+  "measure": "width × height (mm)",
+  "options": "velcro"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "pin-buckle",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "belt"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "side-release-buckle",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "slide-buckle",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "toggle-closure",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "duffle"
+ },
+ {
+  "path": "Trims and details > Closure, other",
+  "tag": "trouser-hook-and-bar",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Braided",
+  "tag": "braided-flat-cord",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Braided",
+  "tag": "braided-round-cord",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Knitted",
+  "tag": "flat-knit-cord",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Knitted",
+  "tag": "tubular-knit-cord",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Other",
+  "tag": "elastic-cord",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "shock cord"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Other",
+  "tag": "leather-cord",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Other",
+  "tag": "printed-logo-cord",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "repeat logo"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Other",
+  "tag": "rope-cord",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "twisted"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Other",
+  "tag": "waxed-cord",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Self-fabric",
+  "tag": "self-fabric-flat",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "edge stitch: none / single / double"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Self-fabric",
+  "tag": "self-fabric-round",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Woven",
+  "tag": "flat-woven-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Cord > Woven",
+  "tag": "tubular-woven-cord",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "metal-aglet-crimp",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "metal-aglet-screw-cap",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "plastic-aglet",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "rubber-dipped-end",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "shrink-tube-end",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > Aglet",
+  "tag": "silicone-aglet",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "debossed logo: yes / no"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > No aglet",
+  "tag": "heat-sealed-end",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > No aglet",
+  "tag": "knotted-end",
+  "status": "approved",
+  "options": "single / double knot"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > No aglet",
+  "tag": "raw-end",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Drawcord > Ends > No aglet",
+  "tag": "stitched-end",
+  "status": "approved",
+  "options": "folded and stitched"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "buttonhole-exit",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "embroidered-eyelet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "stitched round hole"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "internal-drawcord",
+  "status": "approved",
+  "options": "inside the waistband, no visible exit"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "metal-eyelet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "inner diameter · finish · metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "metal-grommet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "with washer · finish · metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "open-channel-end",
+  "status": "approved",
+  "options": "exits at the channel's end"
+ },
+ {
+  "path": "Trims and details > Drawcord > Exit > Through",
+  "tag": "plastic-grommet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Stopper > Cord lock",
+  "tag": "barrel-stopper",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Stopper > Cord lock",
+  "tag": "bell-stopper",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Drawcord > Stopper > Cord lock",
+  "tag": "none",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Drawcord > Stopper > Cord lock",
+  "tag": "spring-toggle-1-hole",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "plastic / metal"
+ },
+ {
+  "path": "Trims and details > Drawcord > Stopper > Cord lock",
+  "tag": "spring-toggle-2-hole",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "braided-elastic",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "jacquard-logo-elastic",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "branded"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "knitted-elastic",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "plush-back-elastic",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "silicone-gripper-elastic",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Make",
+  "tag": "woven-elastic",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Elastic > Placement",
+  "tag": "encased-elastic",
+  "status": "approved",
+  "options": "inside a channel"
+ },
+ {
+  "path": "Trims and details > Elastic > Placement",
+  "tag": "exposed-elastic",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Elastic > Placement",
+  "tag": "partial-elastic",
+  "status": "approved",
+  "options": "back only / sides"
+ },
+ {
+  "path": "Trims and details > Eyelet / grommet",
+  "tag": "embroidered-eyelet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Eyelet / grommet",
+  "tag": "metal-eyelet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "inner diameter · finish · metal"
+ },
+ {
+  "path": "Trims and details > Eyelet / grommet",
+  "tag": "metal-grommet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "with washer"
+ },
+ {
+  "path": "Trims and details > Eyelet / grommet",
+  "tag": "plastic-grommet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Eyelet / grommet",
+  "tag": "vent-eyelet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "underarm air vent"
+ },
+ {
+  "path": "Trims and details > Label > Fold",
+  "tag": "centre-fold",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Fold",
+  "tag": "end-fold",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Fold",
+  "tag": "loop-fold",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Fold",
+  "tag": "mitre-fold",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Fold",
+  "tag": "straight-cut",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "heat-transfer",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "leather-label",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "metal-plate",
+  "status": "approved",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "printed-cotton",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "printed-satin",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "pu-label",
+  "status": "approved",
+  "options": "faux leather"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "rubber-label",
+  "status": "approved",
+  "options": "PVC / silicone"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "woven-damask",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "woven-satin",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Make",
+  "tag": "woven-taffeta",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "care-label",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "flag-label",
+  "status": "approved",
+  "measure": "width × height (mm)",
+  "options": "on a seam"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "hanger-loop",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "hem-tab",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "main-label",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "size-label",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Label > Purpose",
+  "tag": "tagless-print",
+  "status": "approved",
+  "measure": "width × height (mm)",
+  "options": "heat transfer inside"
+ },
+ {
+  "path": "Trims and details > Loop",
+  "tag": "belt-loop",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Loop",
+  "tag": "cord-loop",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Loop",
+  "tag": "hanger-loop",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Loop",
+  "tag": "key-loop",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Loop",
+  "tag": "thumb-hole",
+  "status": "approved",
+  "options": "cuff"
+ },
+ {
+  "path": "Trims and details > Patch > Attach",
+  "tag": "heat-sealed",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Patch > Attach",
+  "tag": "hook-and-loop",
+  "status": "approved",
+  "options": "removable"
+ },
+ {
+  "path": "Trims and details > Patch > Attach",
+  "tag": "sewn-on",
+  "status": "approved",
+  "options": "edge stitch"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "chenille-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "embroidered-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "felt-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "leather-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "printed-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "pu-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "rubber-patch",
+  "status": "approved",
+  "measure": "width × height (mm)",
+  "options": "PVC / silicone"
+ },
+ {
+  "path": "Trims and details > Patch > Make",
+  "tag": "woven-patch",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "cargo-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)",
+  "options": "bellows"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "chest-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "coin-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "flap-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "hidden-pocket",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "jet-pocket",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "kangaroo-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "patch-pocket",
+  "status": "approved",
+  "measure": "width × height (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "side-seam-pocket",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "slant-pocket",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "welt-pocket",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "single / double"
+ },
+ {
+  "path": "Trims and details > Pocket",
+  "tag": "zip-pocket",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Rib > Knit",
+  "tag": "flat-knit-collar",
+  "status": "approved",
+  "options": "polo"
+ },
+ {
+  "path": "Trims and details > Rib > Knit",
+  "tag": "ottoman-rib",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Rib > Knit",
+  "tag": "rib-1x1",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Rib > Knit",
+  "tag": "rib-2x2",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Rib > Knit",
+  "tag": "tipped-rib",
+  "status": "approved",
+  "options": "contrast stripes"
+ },
+ {
+  "path": "Trims and details > Rib > Where",
+  "tag": "rib-collar",
+  "status": "approved",
+  "measure": "height (mm)"
+ },
+ {
+  "path": "Trims and details > Rib > Where",
+  "tag": "rib-cuffs",
+  "status": "approved",
+  "measure": "height (mm)"
+ },
+ {
+  "path": "Trims and details > Rib > Where",
+  "tag": "rib-hem",
+  "status": "approved",
+  "measure": "height (mm)",
+  "options": "waistband"
+ },
+ {
+  "path": "Trims and details > Rib > Where",
+  "tag": "rib-placket",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "bartack-instead",
+  "status": "approved",
+  "options": "no rivet, bartack"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "burr-rivet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "cap-rivet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "double-cap-rivet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "hidden-rivet",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Rivet",
+  "tag": "jeans-rivet",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Snap",
+  "tag": "cap-snap",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "closed cap, logo possible"
+ },
+ {
+  "path": "Trims and details > Snap",
+  "tag": "magnetic-snap",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "hidden"
+ },
+ {
+  "path": "Trims and details > Snap",
+  "tag": "ring-snap",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "prong, open ring"
+ },
+ {
+  "path": "Trims and details > Snap",
+  "tag": "sew-on-snap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Snap",
+  "tag": "spring-snap",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "S-spring cap"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "cone-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "flat-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "logo-engraved-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "pyramid-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "rhinestone-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "round-dome-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "spike-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Cap",
+  "tag": "star-cap",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Studs > Finish",
+  "tag": "antique",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Finish",
+  "tag": "brushed",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Finish",
+  "tag": "enamel",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Finish",
+  "tag": "glossy",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Finish",
+  "tag": "matt",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "brass",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "bronze",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "copper",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "gold",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "gun-black",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Metal",
+  "tag": "silver",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Studs > Post",
+  "tag": "prong-back",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "claws through the fabric"
+ },
+ {
+  "path": "Trims and details > Studs > Post",
+  "tag": "rivet-post",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "set like a rivet"
+ },
+ {
+  "path": "Trims and details > Studs > Post",
+  "tag": "screw-back",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "screwed from inside"
+ },
+ {
+  "path": "Trims and details > Studs > Post",
+  "tag": "sew-on",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "sewn through holes"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "back-neck-tape",
+  "status": "approved",
+  "measure": "width (mm)",
+  "options": "self / herringbone / printed logo"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "bias-binding",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "contrast-binding",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "herringbone-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "piping",
+  "status": "approved",
+  "measure": "diameter (mm)",
+  "options": "corded"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "printed-logo-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "reflective-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "seam-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "self-binding",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Tape / binding",
+  "tag": "twill-tape",
+  "status": "approved",
+  "measure": "width (mm)"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "aglets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "back-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "button-cuffs",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "buttons",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "cargo-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "chest-pocket",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "distressing",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "drawcord",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "eyelets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "flap-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "fringe",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "kangaroo-pocket",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "leather-patch",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "lining",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "metal-plaque",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "neck-tape",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "pearl-buttons",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "pockets",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "rib-collar",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "rib-cuffs",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "rivets",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "side-adjusters",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "side-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "snaps",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "studs",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "tassels",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "welt-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "wide-laces",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "zip",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "zip-pockets",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Trim",
+  "tag": "zip-pull",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Trims and details > Zip > Chain",
+  "tag": "coil-zip",
+  "status": "approved",
+  "measure": "gauge",
+  "options": "nylon coil"
+ },
+ {
+  "path": "Trims and details > Zip > Chain",
+  "tag": "invisible-zip",
+  "status": "approved",
+  "measure": "gauge",
+  "options": "concealed coil"
+ },
+ {
+  "path": "Trims and details > Zip > Chain",
+  "tag": "metal-zip",
+  "status": "approved",
+  "measure": "gauge",
+  "options": "finish · metal"
+ },
+ {
+  "path": "Trims and details > Zip > Chain",
+  "tag": "molded-plastic-zip",
+  "status": "approved",
+  "measure": "gauge",
+  "options": "vislon"
+ },
+ {
+  "path": "Trims and details > Zip > Chain",
+  "tag": "water-repellent-zip",
+  "status": "approved",
+  "measure": "gauge",
+  "options": "coated tape"
+ },
+ {
+  "path": "Trims and details > Zip > Opening",
+  "tag": "closed-end",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Opening",
+  "tag": "open-end-separating",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Opening",
+  "tag": "two-way-closed",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Opening",
+  "tag": "two-way-separating",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "centre-front-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "fly-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "half-zip",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "quarter / half"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "hem-split-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "pocket-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "side-seam-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Placement",
+  "tag": "sleeve-zip",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "cord-puller",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "cord with aglet / bead"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "fabric-tab-puller",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "self-fabric / tape loop"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "leather-puller",
+  "status": "approved",
+  "measure": "length (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "metal-tab-puller",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "logo engraved / debossed · finish · metal"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "ring-puller",
+  "status": "approved",
+  "measure": "diameter (mm)"
+ },
+ {
+  "path": "Trims and details > Zip > Puller",
+  "tag": "rubber-puller",
+  "status": "approved",
+  "measure": "length (mm)",
+  "options": "debossed logo"
+ },
+ {
+  "path": "Trims and details > Zip > Slider",
+  "tag": "auto-lock-slider",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Slider",
+  "tag": "non-lock-slider",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Slider",
+  "tag": "pin-lock-slider",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Slider",
+  "tag": "reversible-slider",
+  "status": "approved",
+  "options": "double pull"
+ },
+ {
+  "path": "Trims and details > Zip > Tape",
+  "tag": "contrast-tape",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Tape",
+  "tag": "printed-logo-tape",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Tape",
+  "tag": "reflective-tape",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Zip > Tape",
+  "tag": "tonal-tape",
+  "status": "approved",
+  "options": "dtm"
+ }
+]
