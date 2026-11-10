@@ -485,6 +485,16 @@
   "status": "approved"
  },
  {
+  "path": "Arts > Technique > Effect",
+  "tag": "faded",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Effect",
+  "tag": "rusted",
+  "status": "waiting for approval"
+ },
+ {
   "path": "Arts > Technique > Embellishment",
   "tag": "applique",
   "status": "waiting for approval"
@@ -512,6 +522,11 @@
  {
   "path": "Arts > Technique > Embroidery",
   "tag": "tufting",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Finish",
+  "tag": "matt",
   "status": "waiting for approval"
  },
  {
@@ -547,6 +562,11 @@
  {
   "path": "Arts > Technique > Print",
   "tag": "high-density-print",
+  "status": "waiting for approval"
+ },
+ {
+  "path": "Arts > Technique > Print",
+  "tag": "plastisol",
   "status": "waiting for approval"
  },
  {
@@ -2711,6 +2731,31 @@
   "options": "underarm air vent"
  },
  {
+  "path": "Trims and details > Label > Finish",
+  "tag": "glossy",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Finish",
+  "tag": "matt",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Finish",
+  "tag": "metallic",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Finish",
+  "tag": "satin-sheen",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Label > Finish",
+  "tag": "textured",
+  "status": "approved"
+ },
+ {
   "path": "Trims and details > Label > Fold",
   "tag": "centre-fold",
   "status": "approved"
@@ -2878,6 +2923,31 @@
   "tag": "sewn-on",
   "status": "approved",
   "options": "edge stitch"
+ },
+ {
+  "path": "Trims and details > Patch > Finish",
+  "tag": "glossy",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Patch > Finish",
+  "tag": "matt",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Patch > Finish",
+  "tag": "metallic",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Patch > Finish",
+  "tag": "satin-sheen",
+  "status": "approved"
+ },
+ {
+  "path": "Trims and details > Patch > Finish",
+  "tag": "textured",
+  "status": "approved"
  },
  {
   "path": "Trims and details > Patch > Make",

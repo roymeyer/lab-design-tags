@@ -1,25 +1,30 @@
 {
- "round": "20261110-1844",
+ "round": "20261110-2050",
  "rules": [
   "Fill only what the product's photos or its text show. Never guess and never invent: leave a part empty when it is not visible or not stated.",
-  "Pick tags from the catalogue, on their path. Tags waiting for approval may be used too.",
-  "A tag the catalogue lacks goes in new_tags only, with its full path (e.g. Trims and details > Drawcord > Ends > Aglet), the words the shop uses and why.",
-  "Tags are lower-case kebab-case (braided-round-cord). Sizes in mm only when the shop states them.",
-  "A trim's parts follow the catalogue: a drawcord has Cord, Ends, Exit, Stopper; in each part's note write what is visible: material, colour, finish, design (e.g. metal · gun black · matt · flat edge, rounded body).",
-  "Each art is its own entry: its side, its position, its graphic, font and technique. dtm: true when the art is the fabric's colour (tone-on-tone).",
-  "photos_to_delete: suggest photos that add nothing (duplicates, no product, unrelated). They are only suggestions: nothing is deleted.",
+  "Pick tags from the catalogue, on their path. Tags waiting for approval may be used too. A tag the catalogue lacks goes in new_tags only, with its full path, the shop's words and why.",
+  "Tags are lower-case kebab-case (braided-round-cord). Fonts are written as the family is named in fonts.json.",
+  "Do not give fit words, the audience or the category: LAB fills them from its own measurements and the shop.",
+  "Do not write centimetres. Draw a box instead: an art, each text inside it and each label or patch gets a box on the job's measure_photo (the photo LAB measures: the whole garment, no model), as [x1, y1, x2, y2], each 0-1 of the photo's width and height. LAB measures it in cm (its size, how far from the HPS, CB or waistband and from the centre). Box on another photo only what that photo does not show; it then comes without cm.",
+  "An art is one printed, embroidered or applied graphic area of the garment, or a label, patch or tab sewn on it.",
+  "Every separate text inside an art is its own element: its exact words, its closest font, its own effect and its own box. Two lines in two different fonts or treatments are two elements (e.g. 'UNDER GROUND' faded in a stencil font, 'GLOBAL CLUB / BUILT BELOW THE SURFACE' plain in a sans serif).",
+  "An art's technique is split: technique (e.g. plastisol, puff-print, embroidery), finish (matt, glossy…), effect (faded, cracked, rusted…). dtm: true when the art is in the fabric's own colour.",
+  "A label, a patch or a tab is an art (kind: label / patch), described in full: its purpose, make (woven-damask, satin, taffeta, printed, rubber…), fold, finish (matt, glossy…), the exact words on it with their font, and its box. Its colours are read by LAB from its boxes.",
+  "Colours are never written: for each art, box it on each colour's own photo (by_colour) and LAB reads its Pantone there, and the fabric's Pantone from each colour's photo.",
+  "gsm is a number of grams per square metre: the shop's when stated, else your estimate from how the fabric looks and falls (it is marked as estimated).",
+  "A part's details are kebab-case tags (self-colour, frayed-edge, matt, gun-black), never a sentence.",
+  "Treatments (washes, distressing…) describe the style: they apply to every colour.",
+  "A trim's parts follow the catalogue (a drawcord: Cord, Ends, Exit, Stopper; a zip: Chain, Opening, Tape, Slider, Puller, Placement). Two of one item (rib cuffs and a rib hem) are two entries.",
+  "photos_to_delete: suggest photos that add nothing (duplicates, no product, another style). They are only suggestions: nothing is deleted.",
   "Answer with one JSON block exactly in the answer format, every job of this round in it, nothing else in the block."
  ],
  "answer_format": {
   "jobs": [
    {
     "job": "<the job id exactly as given>",
-    "fit": [
-     "<tags from Fit>"
-    ],
     "fabrics": [
      {
-      "fabric": "<a tag from Fabric > Woven/Knitted/…>",
+      "fabric": "<a tag from Fabric > Woven / Knitted / Non-woven / Seamless>",
       "fibres": [
        {
         "fibre": "<tag from Fabric > Fiber>",
@@ -29,23 +34,49 @@
       "yarn": [
        "<tags from Fabric > Yarn>"
       ],
-      "gsm": "<only if stated>"
+      "gsm": 240
      }
     ],
     "arts": [
      {
-      "side": "front | back | side",
-      "position": "<tag from Arts > Position>",
+      "kind": "print | embroidery | label | patch | applique | …",
+      "label": {
+       "purpose": "<for a label or patch: main-label, flag-label, hem-tab…>",
+       "make": "<woven-damask, satin, taffeta, printed, rubber…>",
+       "fold": "<straight-cut, end-fold, centre-fold, loop-fold…>"
+      },
+      "side": "front | back | sleeve",
+      "photo": "<the job's measure_photo (box it there when it shows there; another photo only when the art is not on it)>",
+      "box": "[x1, y1, x2, y2] on that photo, each 0-1 of its width / height (top-left 0,0)",
       "graphic": [
        "<Arts > Graphic>"
       ],
-      "font": [
-       "<Arts > Font>"
-      ],
       "technique": [
-       "<Arts > Technique>"
+       "<Arts > Technique: e.g. plastisol>"
       ],
-      "dtm": false
+      "finish": [
+       "<matt / glossy / …>"
+      ],
+      "effect": [
+       "<faded / cracked / rusted / …>"
+      ],
+      "dtm": false,
+      "elements": [
+       {
+        "text": "<the exact words, as written>",
+        "font": "<the closest family in fonts.json>",
+        "effect": [
+         "<this text's own effect, e.g. faded>"
+        ],
+        "box": "[x1, y1, x2, y2] on that photo, each 0-1 of its width / height (top-left 0,0)"
+       }
+      ],
+      "by_colour": {
+       "<each colour of the product, as named in the job's colours>": {
+        "photo": "<that colour's photo showing this art>",
+        "box": "[x1, y1, x2, y2] on that photo, each 0-1 of its width / height (top-left 0,0)"
+       }
+      }
      }
     ],
     "treatments": [
@@ -53,12 +84,14 @@
     ],
     "trims": [
      {
-      "item": "<e.g. drawcord>",
+      "item": "<drawcord / zip / label / patch / rib / button …>",
       "parts": {
-       "Cord": {
-        "type": "<tag from that part>",
+       "<a part of that item in the catalogue, e.g. Cord>": {
+        "type": "<a tag of that part>",
         "size": "<mm, only if stated>",
-        "note": "<material, colour, finish, design…>"
+        "details": [
+         "<kebab-case tags of what is visible: material, colour, finish, design, e.g. self-colour, frayed-edge>"
+        ]
        }
       },
       "tags": [
@@ -82,7 +115,7 @@
     "photos_to_delete": [
      {
       "photo": "<the photo's address>",
-      "why": "<duplicate, no product, close-up that adds no tag…>"
+      "why": "<duplicate, no product, unrelated style…>"
      }
     ],
     "evidence": "<which words or photos each choice rests on>",
@@ -92,53 +125,1027 @@
  },
  "jobs": [
   {
-   "job": "maniajeans.co.il|11004629254455",
+   "job": "maniajeans.co.il|11023936454967",
    "brand": "Mania Jeans",
-   "name": "פוטר קפוצון עם רוכסן לגבר",
+   "name": "טי שירט לגבר UNFINISHED",
    "colour": "",
    "colours": [
-    "11004629254455"
-   ],
-   "category": "SWEATSHIRTS & HOODIES",
-   "composition": "",
-   "price": 329.9,
-   "currency": "ILS",
-   "link": "https://www.maniajeans.co.il/products/4f022-c7",
-   "photos": [
-    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F022-C7-1.jpg?v=1791712846",
-    "http://www.maniajeans.co.il/cdn/shop/files/e659815beaf1e814361000712b3933af_7421af22-2dbc-460f-9d14-e3534473e150.webp?v=1793524902",
-    "https://www.maniajeans.co.il/cdn/shop/files/e659815beaf1e814361000712b3933af_7421af22-2dbc-460f-9d14-e3534473e150.webp?v=1793524902"
-   ],
-   "text": "רשת Mania Jeans פונה לגברים מובילי אופנה ומציעה קולקציות הכוללות מגוון רחב של פריטים ליום ולערב. בקרו באתר לרכישת בגדי גברים והזמינו אונליין עם שליח עד הבית."
-  },
-  {
-   "job": "yn10565.com|25986·MAROON",
-   "brand": "YN® 10.56.5",
-   "name": "OVERSIZED GRAPHIC T-SHIRT T0146",
-   "colour": "MAROON",
-   "colours": [
-    "BLACK",
-    "BLUE",
-    "BROWN",
-    "MAROON",
-    "STONE"
+    ""
    ],
    "category": "T-SHIRTS",
-   "composition": "Cotton",
-   "price": 249.0,
+   "composition": "50% Cotton · 50% Polyester",
+   "price": 229.9,
    "currency": "ILS",
-   "link": "https://yn10565.com/product/oversized-graphic-t-shirt-t0146/",
+   "link": "https://www.maniajeans.co.il/products/4f408-11",
    "photos": [
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146.jpeg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-7.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-9.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0175-BLACK-4.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-2.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-3.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-4.jpg",
-    "https://yn10565.com/wp-content/uploads/2025/10/T0146-5.jpg"
+    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F408-11-1.jpg?v=1792456376",
+    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F408-11-2.jpg?v=1792456372",
+    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F408-11-3.jpg?v=1792456373",
+    "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F408-11-4.jpg?v=1792456373"
    ],
-   "text": "OVERSIZED GRAPHIC T-SHIRT\nחולצת טי-שירט בגזרת אוברסייז רחבה ומשוחררת שיושבת מעולה על הגוף. עשויה מבד כותנה איכותי, רך ונעים למגע. מעוצבת עם רקמת לוגו 10.56.5 קטנה במרכז החזה ודיסטרויז עדינים בכתף ובמכפלת. כוללת תווית ממותגת עדינה על השרוול שמוסיפה נגיעה אורבנית נקייה. פריט קליל ליום-יום שסוגר לך את הלוק בסטייל.\n: OVERSIZED GRAPHIC T-SHIRT\nחולצת טי-שירט בגזרת אוברסייז רחבה ומשוחררת שיושבת מעולה על הגוף\n. עשויה מבד כותנה איכותי, רך ונעים למגע\n. מעוצבת עם רקמת לוגו 10.56.5 קטנה במרכז החזה ודיסטרויז עדינים בכתף ובמכפלת\n. כוללת תווית ממותגת עדינה על השרוול שמוסיפה נגיעה אורבנית נקייה\n. פריט קליל ליום-יום שסוגר לך את הלוק בסטייל"
+   "text": "טי שירט עם שרוולים ארוכים, עשויה בד בטקסטורה עדינה. בעלת צווארון עגול, כתפיים שמוטות והדפס כיתוב קטן בחזית בגוון ניגודי.\n: טי שירט עם שרוולים ארוכים, עשויה בד בטקסטורה עדינה. בעלת צווארון עגול, כתפיים שמוטות והדפס כיתוב קטן בחזית בגוון ניגודי.\nגזרה\nאוברסייז (כחול)\nהרכב בד\n50%cotton 50%polyester\n: אוברסייז (כחול)\nהרכב בד\n50%cotton 50%polyester",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/1003/2401/6439/files/4F408-11-4.jpg?v=1792456373"
+  },
+  {
+   "job": "amiri.com|7861557592129",
+   "brand": "Amiri",
+   "name": "MA STRIPED OVERSIZED POLO - Tobacco",
+   "colour": "Tobacco",
+   "colours": [
+    "TOBACCO"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 490.0,
+   "currency": "",
+   "link": "https://amiri.com/products/ma-striped-os-polo-tobacco",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/1056/1394/files/90_PF26_MEN_RTW_Tops_Jerseywear_Polo_AM326JR019-253_MA_20STRIPED_20OS_20POLO_Tobacco_1_7fc2c22496bb4c668b753382ef234e45.jpg?v=1787824124",
+    "https://cdn.shopify.com/s/files/1/1056/1394/files/90_PF26_MEN_RTW_Tops_Jerseywear_Polo_AM326JR019-253_MA_20STRIPED_20OS_20POLO_Tobacco_2_1003095166f84a03b7f5b37b0d169b2e.jpg?v=1787824124",
+    "https://cdn.shopify.com/s/files/1/1056/1394/files/90_PF26_MEN_RTW_Tops_Jerseywear_Polo_AM326JR019-253_MA_20STRIPED_20OS_20POLO_Tobacco_3_448a029257aa4fdc8fc5fba36dd0449c.jpg?v=1787824123",
+    "https://cdn.shopify.com/s/files/1/1056/1394/files/90_PF26_MEN_RTW_Tops_Jerseywear_Polo_AM326JR019-253_MA_20STRIPED_20OS_20POLO_Tobacco_4_5a0db07d856a46a19d8c8d1dc0b1ed62.jpg?v=1787824123"
+   ],
+   "text": "Pre-Fall 2026 eases and elevates men's striped polos with amplified proportions and house signature graphics. The MA Striped Oversized Polo in cotton is designed in a relaxed fit with a contrast collar, MA icon appliqué, and three-button closure.\n\nPre-Fall 2026 Collection\n\nMade In Portugal\n\n100% Cotton\n\nThis garment has undergone a special process which results in intentional variations of shading and color, and add to the piece's unique characteristics. This may lead to bleeding or dye transfer. Please use caution when washing or dry-cleaning this item.\nFINAL SALE\n: Pre-Fall 2026 eases and elevates men's striped polos with amplified proportions and house signature graphics. The MA Striped Oversized Polo in cotton is designed in a relaxed fit with a contrast collar, MA icon appliqué, and three-button closure.\nPre-Fall 2026 Collection\nMade In Portugal\n100% Cotton\nThis garment has undergone a special process which results in intentional variations of shading and color, and add to the piece's unique characteristics. This may lead to bleeding or dye transfer. Please use caution when washing or dry-cleaning this item.\nFINAL SALE\nstyle:AM326JR019-253\n: Size Guide\nmodel measurements:\nheight: 6'2\"\nchest: 36\"\nwaist: 30\"\nhip: 36\"\nproduct measurements (size m):\nchest : 23.5\"\nshoulder: 24\"\nlength: 29\"\nsleeve length: 9.5\"\ndesigned with a oversized fit; for a more classic fit, we recommend sizing down.\nSize Guide",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/1056/1394/files/90_PF26_MEN_RTW_Tops_Jerseywear_Polo_AM326JR019-253_MA_20STRIPED_20OS_20POLO_Tobacco_1_7fc2c22496bb4c668b753382ef234e45.jpg?v=1787824124"
+  },
+  {
+   "job": "shilav.co.il|8845003129001",
+   "brand": "Shilav",
+   "name": "סט אוברול ג'ינס ובגד גוף",
+   "colour": "שחור",
+   "colours": [
+    "שחור"
+   ],
+   "category": "LONG JEANS",
+   "composition": "100% Cotton",
+   "price": 159.9,
+   "currency": "",
+   "link": "https://www.shilav.co.il/products/אוברול-ובגד-גוף-48",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700730564_32700731564-B.jpg?v=1787146508",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700730564_32700731564-A.jpg?v=1787146508",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700730564_32700731564-E.jpg?v=1787146509",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700730564-A.jpg?v=1786544095",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700730564-B.jpg?v=1786544097",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700730564-C.jpg?v=1786544100",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700730564-D.jpg?v=1786544104"
+   ],
+   "text": "סט מדליק של אוברול ג'ינס בעיצוב קלאסי ובגד גוף לבן עם הכיתוב The Spirit עם הדפסים מתוקים בשרוול. לאוברול כפתורי תיק תק לאורך הרגליים להלבשה ולהחלפה קלה ונוחה. סט מושלם לשימוש יומיומי ולאירועים מיוחדים עשוי בד איכותי ורך 100% כותנה.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700730564-A.jpg?v=1786544095"
+  },
+  {
+   "job": "fox.co.il|15129202196850",
+   "brand": "Fox",
+   "name": "מארז 3 מכנסיים ניו בורן ארוכים",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 84.9,
+   "currency": "",
+   "link": "https://www.fox.co.il/products/8810510303",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810510303-6.jpg?v=1784636834",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810510303-7.jpg?v=1784636879",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810510303-5.jpg?v=1784636792",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810510303-1.jpg?v=1784636820"
+   ],
+   "text": "מארז של מכנסיים ארוכים בגזרת טייץ צמודה בעיצוב נקודות עדין, הדגם מגיע בטקסטורת ריב עם סיומת של מנג'ט גמיש ברגליים",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810510303-6.jpg?v=1784636834"
+  },
+  {
+   "job": "fox.co.il|15129205735794",
+   "brand": "Fox",
+   "name": "מארז 3 מכנסי ניו בורן ארוכים",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 84.9,
+   "currency": "",
+   "link": "https://www.fox.co.il/products/8810529400",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-3.jpg?v=1784636971",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-5.jpg?v=1784636757",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-1.jpg?v=1784636984",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-4.jpg?v=1784636729",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-7.jpg?v=1784636777"
+   ],
+   "text": "מארז מכנסיים הכולל שלושה זוגות ארוכים בגזרה ישרה , עם הדפס דובדבנים ושרוך קשירה במותן",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8810529400-3.jpg?v=1784636971"
+  },
+  {
+   "job": "fox.co.il|15132204204402",
+   "brand": "Fox",
+   "name": "מארז שלישיית מכנסיים",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 84.9,
+   "currency": "",
+   "link": "https://www.fox.co.il/products/8119289401",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8119289401-1.jpg?v=1784802283",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8119289401-4.jpg?v=1784802233",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8119289401-2.jpg?v=1784802269",
+    "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8119289401-3.jpg?v=1784802254"
+   ],
+   "text": "מארז שלישיית מכנסיים ארוכים בגזרת ג'וגר הכולל גומי ושרוך קשירה במותן. המארז משלב דגמים חלקים ודגם עם הדפס עדין מהטבע, כולם עם סיומת מנג'ט אלסטי",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0638/8252/6908/files/8119289401-1.jpg?v=1784802283"
+  },
+  {
+   "job": "ainker.com|9351755825320",
+   "brand": "AINKER",
+   "name": "BB 712 Off-White Short Pant",
+   "colour": "Off-White",
+   "colours": [
+    "Off-White"
+   ],
+   "category": "WOVEN SHORTS",
+   "composition": "",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/bb-712-mocha-short-pant",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/13_20.jpg?v=1773648298",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/14_22.jpg?v=1773648298",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/41927_5ff0d81b-06d2-4b9e-a734-a0f9c30eb705.jpg?v=1773648298",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/41933.jpg?v=1773648298",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/41927_38352465-a2f7-470d-b819-5cb13cdbb9b4.jpg?v=1773648298",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/41928_4534aa6f-3679-4a22-af6d-c07d529b82e1.jpg?v=1773648298"
+   ],
+   "text": "Elevated athletic style with a refined edge. Crafted from premium performance mesh , these shorts are lightweight, breathable, and designed for effortless comfort. The relaxed silhouette and contrast stripe detailing deliver a clean, modern look that moves seamlessly between sport and street.\n\nAvailable Colors Black / Blue · Black / Grey · Terracotta · White / Blue · White / Grey · Off-White\n\nFit Relaxed fit Model is 186 cm and wears size Large .\n: Elevated athletic style with a refined edge. Crafted from\npremium performance mesh\n, these shorts are lightweight, breathable, and designed for effortless comfort. The relaxed silhouette and contrast stripe detailing deliver a clean, modern look that moves seamlessly between sport and street.\nAvailable Colors\nBlack / Blue · Black / Grey · Terracotta · White / Blue · White / Grey · Off-White\nFit\nRelaxed fit\nModel is\n186 cm\nand wears\nsize Large\n: Relaxed fit\nModel is\n186 cm\nand wears\nsize Large\n: Size guide",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/13_20.jpg?v=1773648298"
+  },
+  {
+   "job": "ainker.com|9531219804328",
+   "brand": "AINKER",
+   "name": "Mercerized 1015 Black T-Shirt",
+   "colour": "Black",
+   "colours": [
+    "Black",
+    "Mercerized 1015 White T-Shirt",
+    "Mercerized 1015 Blue T-Shirt"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1015-black-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.1_2.jpg?v=1785394956",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/20_12_4d45e1a9-9a74-45e1-b564-9c48de66c890.jpg?v=1787655643",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/21_14_49725eca-ae9f-485e-9873-20479e54f0f8.jpg?v=1787655644",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/22_14_b6f56d31-c926-47eb-8f64-a47a6eb60ed3.jpg?v=1787655644",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.2_94d2f1f2-a74e-4704-bf01-ba5cc3431fbb.jpg?v=1785394974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2_1_716c53ad-deda-49b0-ad67-634b831e1417.jpg?v=1785395000"
+   ],
+   "text": "Crafted from premium mercerized cotton, this signature tee embodies AINKER's refined approach to essential dressing, featuring a delicately embroidered crest emblem at the chest and the house's signature script at the nape.\n\nThe mercerization process lends the fabric a subtle luster and exceptional softness, elevating a everyday essential into a refined staple. The relaxed, structured fit offers an effortlessly elevated silhouette suited to both casual and directional styling.\n\nAvailable in Black, White, and Blue\n\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: Crafted from premium mercerized cotton, this signature tee embodies AINKER's refined approach to essential dressing, featuring a delicately embroidered crest emblem at the chest and the house's signature script at the nape.\nThe mercerization process lends the fabric a subtle luster and exceptional softness, elevating a everyday essential into a refined staple. The relaxed, structured fit offers an effortlessly elevated silhouette suited to both casual and directional styling.\nAvailable in Black, White, and Blue\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.1_2.jpg?v=1785394956"
+  },
+  {
+   "job": "ainker.com|9542406832296",
+   "brand": "AINKER",
+   "name": "Mercerized 1113 Brown T-Shirt",
+   "colour": "Brown",
+   "colours": [
+    "Black",
+    "White",
+    "Brown"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1113-brown-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_3_05a9479d-811c-4a31-9ef6-74f36be308ed.jpg?v=1786016837",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/33_3228c610-9a01-444d-8ab3-0f2e84d3d0eb.jpg?v=1786621660",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/32_a4798d48-24a6-46e7-b951-96c41ef14e44.jpg?v=1786621660",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/30_440316e1-94d8-44e8-ba16-880e7267b360.jpg?v=1786621660",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3.1_3.jpg?v=1786016848",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3.2_3.jpg?v=1786016858"
+   ],
+   "text": "Cut from luxurious mercerized cotton for a refined, silky smooth finish, this tee embodies quiet, understated elegance.\n\nA subtle tonal AINKER embroidery graces the back neckline, while delicate metal stud accents at the shoulders and chest add a discreet signature touch. The relaxed, oversized silhouette drapes effortlessly for a modern, elevated look.\n\nAvailable in Black, White, and Brown.\n\nShown here on a 1.88m model wearing a size Large.\n: Cut from luxurious mercerized cotton for a refined, silky smooth finish, this tee embodies quiet, understated elegance.\nA subtle tonal AINKER embroidery graces the back neckline, while delicate metal stud accents at the shoulders and chest add a discreet signature touch.\nThe relaxed, oversized silhouette drapes effortlessly for a modern, elevated look.\nAvailable in Black, White, and Brown.\nShown here on a 1.88m model wearing a size Large.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_3_05a9479d-811c-4a31-9ef6-74f36be308ed.jpg?v=1786016837"
+  },
+  {
+   "job": "ainker.com|9542470074536",
+   "brand": "AINKER",
+   "name": "Mercerized 1116 Black T-Shirt",
+   "colour": "Black",
+   "colours": [
+    "Black",
+    "White",
+    "Mercerized 1116 Blue T-Shirt",
+    "Navy",
+    "Mercerized 1116 Gray T-Shirt"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1116-black-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_9_2c9b80c0-ab51-49de-9258-0bff211e1a16.jpg?v=1786534803",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/12_995b00a7-7b1b-44ad-92ba-c1fa7f72c923.jpg?v=1786621828",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/13_533a82e7-2b89-4106-969d-eb9da4c94bb7.jpg?v=1786621829",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/10_fa694fd4-bd4b-4e65-8307-370af0767b5e.jpg?v=1786621829",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.1_7.jpg?v=1786534850",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.2_8.jpg?v=1786534863"
+   ],
+   "text": "Made from premium mercerized cotton for a luxuriously soft feel, this tee pairs everyday ease with intricate craftsmanship.\n\nThe signature \"Ainker\" script is embroidered on the chest, while an elaborate baroque inspired medallion, framing the brand's monogram, commands the back in richly detailed embroidery.\n\nThe oversized, relaxed silhouette lends a modern edge to this heritage-inspired design.\n\nAvailable in Black, White, Blue, Navy and Gray.\n\nShown here on a 1.88m model wearing a size Large.\n: Made from premium mercerized cotton for a luxuriously soft feel, this tee pairs everyday ease with intricate craftsmanship.\nThe signature \"Ainker\" script is embroidered on the chest, while an elaborate baroque inspired medallion, framing the brand's monogram, commands the back in richly detailed embroidery.\nThe oversized, relaxed silhouette lends a modern edge to this heritage-inspired design.\nAvailable in Black, White, Blue, Navy and Gray.\nShown here on a 1.88m model wearing a size Large.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_9_2c9b80c0-ab51-49de-9258-0bff211e1a16.jpg?v=1786534803"
+  },
+  {
+   "job": "ainker.com|9570499559592",
+   "brand": "AINKER",
+   "name": "Mercerized 1005 Green T-Shirt",
+   "colour": "Green",
+   "colours": [
+    "Black",
+    "White",
+    "Green",
+    "Mocha"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1005-green-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_11_f6c5b088-656d-4784-86cb-f65e65ea64b4.jpg?v=1787052783",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/30_8_cb251929-aa1f-4337-b777-d919d01cf4b1.jpg?v=1787477584",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/32_8_dcc29bfd-0c79-4499-9f0b-9ee16c02e1e4.jpg?v=1787477584",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/31_10_f0fc0fcf-5752-4cf7-a168-c90b4ff4e869.jpg?v=1787477584",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3.1_8.jpg?v=1787052776",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1000.jpg?v=1787555349"
+   ],
+   "text": "Rendered in premium mercerized cotton, this tee is elevated by a delicately embroidered \"Ainker\" signature at the hem and an intricately embroidered bee motif tracing the back a refined, tonal detail that speaks quietly of craftsmanship.\n\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand true to the house's heritage. Cut with a relaxed, oversized silhouette, it strikes a considered balance between artisanal detail and effortless ease.\n\nAvailable in Black, White, Green and Mocha.\n\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: Rendered in premium mercerized cotton, this tee is elevated by a delicately embroidered \"Ainker\" signature at the hem and an intricately embroidered bee motif tracing the back a refined, tonal detail that speaks quietly of craftsmanship.\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand true to the house's heritage. Cut with a relaxed, oversized silhouette, it strikes a considered balance between artisanal detail and effortless ease.\nAvailable in Black, White, Green and Mocha.\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_11_f6c5b088-656d-4784-86cb-f65e65ea64b4.jpg?v=1787052783"
+  },
+  {
+   "job": "ainker.com|9584847585448",
+   "brand": "AINKER",
+   "name": "Mercerized 1004 Brown T-Shirt",
+   "colour": "Brown",
+   "colours": [
+    "Black",
+    "White",
+    "Brown"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1004-brown-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_6c3421d9-4139-42e7-89ad-dd06ca44f791.jpg?v=1787580222",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/11_12_28915f53-7c20-4549-8222-3acf515d8f43.jpg?v=1787641835",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/12_12_a21d3a06-d28e-41bf-bc85-54aa3cc9ff6f.jpg?v=1787641832",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/10_9_df75684b-76db-4abf-98ea-6e2f24bda0ca.jpg?v=1787641832",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.2_a8e682bd-eaa6-42ad-a2c9-c735dcd4ed0c.jpg?v=1787580222",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.3_958e83ed-bb82-49aa-b6de-d4433a3b2a20.jpg?v=1787580222"
+   ],
+   "text": "Rendered in premium mercerized cotton, this tee is defined by its quiet minimalism the \"AINKER\" wordmark subtly embossed along the collar at the front, with a tonal emblem embroidered at the back neckline as an understated signature of the house's craftsmanship.\n\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand feel. Cut with a relaxed, oversized silhouette, it balances clean minimalism with understated everyday ease.\n\nAvailable in Black, White and Brown.\n\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: Rendered in premium mercerized cotton, this tee is defined by its quiet minimalism the \"AINKER\" wordmark subtly embossed along the collar at the front, with a tonal emblem embroidered at the back neckline as an understated signature of the house's craftsmanship.\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand feel. Cut with a relaxed, oversized silhouette, it balances clean minimalism with understated everyday ease.\nAvailable in Black, White and Brown.\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_6c3421d9-4139-42e7-89ad-dd06ca44f791.jpg?v=1787580222"
+  },
+  {
+   "job": "campystreet.com|15450880246066",
+   "brand": "Campy",
+   "name": "Short - Blue String",
+   "colour": "Blue",
+   "colours": [
+    "Blue"
+   ],
+   "category": "WOVEN SHORTS",
+   "composition": "",
+   "price": 89.0,
+   "currency": "ILS",
+   "link": "https://campystreet.com/products/short-blue-string",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-3ec9bf4b-1974-4593-baa0-bb8600fae165.jpg?v=1793022254",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-b605043f-ea55-43b6-a836-cfaede2e6c67.jpg?v=1793022254",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-83aae15c-cf14-455f-807e-f6be37caad8f.jpg?v=1793022254",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-6c2bc5a6-979f-490c-84fc-608367bccc51.jpg?v=1793022254"
+   ],
+   "text": "מכנס מבד כותנה אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-3ec9bf4b-1974-4593-baa0-bb8600fae165.jpg?v=1793022254"
+  },
+  {
+   "job": "campystreet.com|15436505907506",
+   "brand": "Campy",
+   "name": "Shirt- Teo Light Blue",
+   "colour": "Light Blue",
+   "colours": [
+    "Light Blue"
+   ],
+   "category": "Shirts",
+   "composition": "",
+   "price": 89.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/shirt-teo-light-blue",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-5980a070-eda1-473b-8b66-d5e94ad85e97.jpg?v=1792415293",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-792b898f-85dc-4264-9125-7181849c2dcf.jpg?v=1792415293",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-b8810d14-1799-4bc4-8f8b-84c0c0d38f6e.jpg?v=1792415293",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7a202457-a969-4379-86df-45432baf6f83.jpg?v=1792415293"
+   ],
+   "text": "מכופתרת מבד כותנה בד אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-5980a070-eda1-473b-8b66-d5e94ad85e97.jpg?v=1792415293"
+  },
+  {
+   "job": "adikastyle.com|15405526221110",
+   "brand": "Adika",
+   "name": "ג'ינס בלון Balloon Denim",
+   "colour": "לבן",
+   "colours": [
+    ""
+   ],
+   "category": "LONG JEANS",
+   "composition": "100% Cotton",
+   "price": 134.95,
+   "currency": "",
+   "link": "https://adikastyle.com/products/7396515-white",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0983/4810/6038/files/7396515_101_a.jpg?v=1791099166",
+    "https://cdn.shopify.com/s/files/1/0983/4810/6038/files/7396515_101_b.jpg?v=1791099166",
+    "https://cdn.shopify.com/s/files/1/0983/4810/6038/files/7396515_101_c.jpg?v=1791099166",
+    "https://cdn.shopify.com/s/files/1/0983/4810/6038/files/7396515_101_d.jpg?v=1791099166"
+   ],
+   "text": "ג'ינס בגזרת בלון. נפח קליל.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0983/4810/6038/files/7396515_101_b.jpg?v=1791099166"
+  },
+  {
+   "job": "ainker.com|15436646777000",
+   "brand": "AINKER",
+   "name": "1133 Light Gray Pant",
+   "colour": "Light Gray",
+   "colours": [
+    "Black",
+    "Brown",
+    "Mocha",
+    "LIGHT GRAY"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Polyester",
+   "price": 599.0,
+   "currency": "",
+   "link": "https://ainker.com/products/1133-light-gray-pant",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.4_3.jpg?v=1792405176",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/22_45.jpg?v=1792405176",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/24_8_394e975e-4c87-46bf-a6c7-bbb66416d4c7.jpg?v=1792405176",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/23_13_d2aa5539-c03a-4c79-a0d2-7d8182f76f3b.jpg?v=1792405176",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.3_3.jpg?v=1792405176",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/101_23.jpg?v=1792405743"
+   ],
+   "text": "Crafted from a smooth, premium polyester with a refined matte finish, these trousers feature an elasticated waistband with a metal-tipped drawstring and sculpted panelling that follows the line of the leg.\n\nTone-on-tone embroidery marks the AINKER signature at the front and the monogram at the back, while side welt pockets and zipped back pockets with polished metal pulls add a considered, functional touch.\n\nComplete the look with the matching hooded jacket for an effortless tailored set.\n\nAvailable in Black, Brown, Light Gray and Mocha.\n\nModel is 1.88 m and wears size L.\n: Crafted from a smooth, premium polyester with a refined matte finish, these trousers feature an elasticated waistband with a metal-tipped drawstring and sculpted panelling that follows the line of the leg.\nTone-on-tone embroidery marks the AINKER signature at the front and the monogram at the back, while side welt pockets and zipped back pockets with polished metal pulls add a considered, functional touch.\nComplete the look with the matching hooded jacket for an effortless tailored set.\nAvailable in Black, Brown, Light Gray and Mocha.\nModel is 1.88 m and wears size L.\n: 100% polyester",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.4_3.jpg?v=1792405176"
+  },
+  {
+   "job": "ainker.com|9602376237224",
+   "brand": "AINKER",
+   "name": "Brunel Dark Blue 1154 Jeans",
+   "colour": "Dark Blue",
+   "colours": [
+    "DARK BLUE",
+    "LIGHT BLUE",
+    "Black"
+   ],
+   "category": "LONG JEANS",
+   "composition": "100% Cotton",
+   "price": 700.0,
+   "currency": "",
+   "link": "https://ainker.com/products/brunel-dark-blue-1154-jeans",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_27_b32b8390-8a5d-47e8-81d3-0c46d3534232.jpg?v=1789489600",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/100_3.jpg?v=1789489600",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/102_2.jpg?v=1789489600",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/101_5.jpg?v=1789489600",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/11_24_ae2f5c32-66cb-43ce-82da-80db953ef372.jpg?v=1789489600",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/10_22_dfb1760f-e505-4c65-9789-7006497a366c.jpg?v=1789489600"
+   ],
+   "text": "Crafted from premium washed denim with a distinctive tapered fit, these jeans feature subtle distressing at the thigh for a lived-in, effortless character.\n\nThe embroidered emblem on the back pocket adds a signature design detail, while the AINKER Brunel leather patch anchors the waistband with understated branding. Clean five-pocket construction and tonal stitching complete the refined, versatile silhouette.\n\nAvailable in Black, Light Blue, and Dark Blue.\n\nShown here in size 33 on a 1.88m model.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_27_b32b8390-8a5d-47e8-81d3-0c46d3534232.jpg?v=1789489600"
+  },
+  {
+   "job": "ainker.com|10306363228328",
+   "brand": "AINKER",
+   "name": "1097 Mocha Pant",
+   "colour": "Mocha",
+   "colours": [
+    "Black",
+    "Mocha"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "",
+   "price": 599.0,
+   "currency": "",
+   "link": "https://ainker.com/products/1097-off-white-pant",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1001_3.jpg?v=1790699219",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1003_3.jpg?v=1790699186",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1005_2.jpg?v=1790699186",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1002_3.jpg?v=1790699186",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1000_2.jpg?v=1790699186",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1004_3.jpg?v=1790699186"
+   ],
+   "text": "Tailored trousers shaped with a soft front pleat, a sharp pressed crease, and an elasticated drawstring waist with a polished metal snap.\n\nSleek silver-tone zippered pockets and a tonal embroidered Ainker signature add a refined modern edge.\n\nAvailable in Black and Mocha.\n\n1.88 m tall and wears size L.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1001_3.jpg?v=1790699219"
+  },
+  {
+   "job": "ainker.com|9627036483752",
+   "brand": "AINKER",
+   "name": "Mercerized 1019 Brown T-Shirt",
+   "colour": "Brown",
+   "colours": [
+    "Mercerized 1019 Black T-Shirt",
+    "Mercerized 1019 White T-Shirt",
+    "Brown"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1019-brown-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_27_dc86cf8e-193f-4d86-8aac-fa83d3761bc2.jpg?v=1789647974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/30_23.jpg?v=1789647974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/32_21.jpg?v=1789647974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/33_5_7c3e6be6-4b14-49a8-8b99-36b30641cd8f.jpg?v=1789647974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3.1_18.jpg?v=1789647974",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3.2_17.jpg?v=1789647975"
+   ],
+   "text": "Rendered in premium mercerized cotton, this tee is defined by its quiet minimalism the \"L'ART À OBTENIR\" wordmark and signature Ainker script subtly printed at the chest, paired with the house's monogram emblem beneath, while a tonal \"AINKER\" wordmark is embroidered at the back neckline as an understated signature of the brand's craftsmanship.\n\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand feel. Cut with a relaxed, oversized silhouette, it balances clean minimalism with understated everyday ease.\n\nAvailable in Black, White and Brown.\n\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: Rendered in premium mercerized cotton, this tee is defined by its quiet minimalism the \"L'ART À OBTENIR\" wordmark and signature Ainker script subtly printed at the chest, paired with the house's monogram emblem beneath, while a tonal \"AINKER\" wordmark is embroidered at the back neckline as an understated signature of the brand's craftsmanship.\nThe mercerized finish lends the fabric a subtle luster and a soft, refined hand feel. Cut with a relaxed, oversized silhouette, it balances clean minimalism with understated everyday ease.\nAvailable in Black, White and Brown.\nShown here in a size Large on a 1.88m model for true-to-fit reference.\n: 100% Mercerized Cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/3_27_dc86cf8e-193f-4d86-8aac-fa83d3761bc2.jpg?v=1789647974"
+  },
+  {
+   "job": "campystreet.com|15450878116146",
+   "brand": "Campy",
+   "name": "Jeans- Oversize Ren Dark Blue",
+   "colour": "Dark Blue",
+   "colours": [
+    "Dark Blue"
+   ],
+   "category": "LONG JEANS",
+   "composition": "",
+   "price": 99.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/jeans-oversize-ren-dark-blue",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-848a9bc6-eea2-4adf-91d1-cb91b9e24dfc.jpg?v=1793022117",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-5cad14b6-4b33-445c-a3a1-366db31dea29.jpg?v=1793022117",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ad949fca-df06-456d-8323-994b23b2aa6a.jpg?v=1793022117",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7e64104a-59fa-49a1-bb51-b9a975552e87.jpg?v=1793022117"
+   ],
+   "text": "גינס אוברסייז , מתאים לכל לוק\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-848a9bc6-eea2-4adf-91d1-cb91b9e24dfc.jpg?v=1793022117"
+  },
+  {
+   "job": "campystreet.com|15446780051762",
+   "brand": "Campy",
+   "name": "Jeans- Oversize Casual Blue",
+   "colour": "Blue",
+   "colours": [
+    "Blue"
+   ],
+   "category": "LONG JEANS",
+   "composition": "",
+   "price": 99.0,
+   "currency": "ILS",
+   "link": "https://campystreet.com/products/jeans-oversize-casual-blue",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-6c126e67-f728-4ad1-91cc-38df486fb8e5.jpg?v=1792941196",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-292a4ad2-58a7-4f48-81b7-d798919222d1.jpg?v=1792941196",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-3b6a7afe-97a8-4bc2-8799-857b20f37c4e.jpg?v=1792941197",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-18dddfab-ef35-476d-bc35-573f591a11a7.jpg?v=1792941196"
+   ],
+   "text": "גינס אוברסייז שחור , מתאים לכל לוק\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-6c126e67-f728-4ad1-91cc-38df486fb8e5.jpg?v=1792941196"
+  },
+  {
+   "job": "ainker.com|9531346714792",
+   "brand": "AINKER",
+   "name": "Mercerized 1002 White T-Shirt",
+   "colour": "White",
+   "colours": [
+    "White",
+    "Black",
+    "Navy"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "100% Cotton",
+   "price": 499.0,
+   "currency": "",
+   "link": "https://ainker.com/products/mercerized-1002-white-t-shirt",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.1_a0a035c6-9fa1-4137-92f3-f7e2b38e746c.jpg?v=1785333449",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/22_5_19316856-ba28-4b64-83d2-829b49a669aa.jpg?v=1786622362",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/20_26.jpg?v=1786455326",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/23_19.jpg?v=1786455326",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.2_962a8c39-9e67-48ab-8c6b-4c7458b1e25d.jpg?v=1785333470",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2_fe695d84-87ed-4fe6-b609-b6c824f0065b.jpg?v=1785333508"
+   ],
+   "text": "Crafted from premium mercerized cotton, this tee is finished with a subtle \"AINKER\" embroidery at the chest and a delicate scatter of bee motifs embroidered across the back, adding quiet detail to a clean silhouette.\n\nThe mercerization process gives the fabric a refined luster and soft, substantial hand-feel true to the house's craftsmanship.\n\nCut with a relaxed, structured fit, it transitions effortlessly from everyday ease to elevated layering.\n\nAvailable in White, Black, and Navy.\n\nShown here in a size Large on a 1.88m model for true to fit reference.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/2.1_a0a035c6-9fa1-4137-92f3-f7e2b38e746c.jpg?v=1785333449"
+  },
+  {
+   "job": "campystreet.com|15450912882994",
+   "brand": "Campy",
+   "name": "Short - B String B",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN SHORTS",
+   "composition": "",
+   "price": 89.0,
+   "currency": "ILS",
+   "link": "https://campystreet.com/products/short-b-string-b",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-c0ae0d62-bf14-43e3-aa95-ec271f245994.jpg?v=1793023980",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-cff090c5-c947-4561-80c4-1028166fb84a.jpg?v=1793023980",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-dcc8cb0b-bdda-469f-878e-0e203315b0a1.jpg?v=1793023980",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ccca8657-fc3e-4442-8b56-654d2b6bea3e.jpg?v=1793024025"
+   ],
+   "text": "מכנס מבד כותנה אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-c0ae0d62-bf14-43e3-aa95-ec271f245994.jpg?v=1793023980"
+  },
+  {
+   "job": "campystreet.com|10244350869810",
+   "brand": "Campy",
+   "name": "Pants- Mika Black",
+   "colour": "Black",
+   "colours": [
+    "Black"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "",
+   "price": 89.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/pants-jaja-mika",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/5_ad54e4e1-e943-4a9a-8cbf-4b410bb82f53.jpg?v=1784549799",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/6_391a42fa-2b10-4a0b-8a53-768095b65576.jpg?v=1784549799",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/7_6d454207-8787-44ae-a393-acd595d7f917.jpg?v=1784549799",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/8_e961199f-a071-4ca4-b275-c62109f07c3f.jpg?v=1784549799"
+   ],
+   "text": "מכנס בגיזרת אוברסייז שחור\n\nמתאים עם כל לוק.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/5_ad54e4e1-e943-4a9a-8cbf-4b410bb82f53.jpg?v=1784549799"
+  },
+  {
+   "job": "sebo-studio.com|8086390439998",
+   "brand": "SEBO",
+   "name": "Mid Fit Linen Blend Tee",
+   "colour": "חום בהיר",
+   "colours": [
+    "בז",
+    "חום בהיר",
+    "",
+    ""
+   ],
+   "category": "T-SHIRTS",
+   "composition": "62% Cotton · 27% Polyester · 11% Linen",
+   "price": 249.9,
+   "currency": "",
+   "link": "https://sebo-studio.com/products/טי-שירט-clean-15",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_1.jpg?v=1794261022",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_2.jpg?v=1794261022",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_3.jpg?v=1794261022",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_4.jpg?v=1794261022",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_5.jpg?v=1794261022",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_6.jpg?v=1794261024",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_7.jpg?v=1794261023",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_1.jpg?v=1793310503"
+   ],
+   "text": "טי־שירט בגזרה ישרה וקלאסית בעלת טקסטורת Slub, עשויה מפשתן מעורב וקווים נקיים.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5E466F3_1.jpg?v=1794261022"
+  },
+  {
+   "job": "campystreet.com|15450881556786",
+   "brand": "Campy",
+   "name": "T-shirt Lin Green",
+   "colour": "Green",
+   "colours": [
+    "Brown",
+    "Beige",
+    "Green"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "",
+   "price": 79.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/t-shirt-lin-green",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7d64e1ab-ba0b-4f7a-b3e6-29c8a1754585.jpg?v=1793022388",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7a46e45d-a810-437c-88a0-b04124c3063b.jpg?v=1793022388",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7954de61-ce14-4dc3-9912-8534a3acefd0.jpg?v=1793022389",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ddaedf20-4e1e-497a-93b9-0785b083b66a.jpg?v=1793022389"
+   ],
+   "text": "חולצה חלקה אוברסייז מתאימה לכל לוק\n\nהתמונה להמחשה בלבד יתכן שינויים קלים בצבעים",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7d64e1ab-ba0b-4f7a-b3e6-29c8a1754585.jpg?v=1793022388"
+  },
+  {
+   "job": "shilav.co.il|8844992544937",
+   "brand": "Shilav",
+   "name": "סט חולצה ומכנסיים בגוון שמנת",
+   "colour": "שמנת",
+   "colours": [
+    "שחור"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 119.9,
+   "currency": "",
+   "link": "https://www.shilav.co.il/products/סט-חולצה-ומכנס-28",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700324263-A.jpg?v=1785233655",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700324263-B.jpg?v=1785233659",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700324263-C.jpg?v=1785233661",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700324263-D.jpg?v=1785233665"
+   ],
+   "text": "סט חולצה ומכנסיים בגוון שמנת בשילוב צווארון מחוייט כפתורי עץ ורקמה עדינה בתכלת עם המילה Champ. עשויה בד איכותי ורך 100% כותנה",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700324263-A.jpg?v=1785233655"
+  },
+  {
+   "job": "campystreet.com|15439021179186",
+   "brand": "Campy",
+   "name": "T-shirt Long Menta",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN LONG-SLEEVE SHIRTS",
+   "composition": "",
+   "price": 79.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/t-shirt-long-menta",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-29daa639-0d02-4b97-b0ed-a3b2bd2d6c21.jpg?v=1792578167",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ac2f0382-7155-4c39-8dfc-8775ca9c0d92.jpg?v=1792578167",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-2d76910d-8021-4265-b4f5-61f951a9dae0.jpg?v=1792578166",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-30c35153-d1c7-459c-b54c-058328dcfadd.jpg?v=1792578167"
+   ],
+   "text": "טישרט חלקה מתאימה לכל לוק\n\nהתמונה להמחשה בלבד יתכן שינויים קלים בצבעים",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-29daa639-0d02-4b97-b0ed-a3b2bd2d6c21.jpg?v=1792578167"
+  },
+  {
+   "job": "campystreet.com|15450884243762",
+   "brand": "Campy",
+   "name": "Short - Plaid G&B",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN SHORTS",
+   "composition": "",
+   "price": 79.0,
+   "currency": "ILS",
+   "link": "https://campystreet.com/products/short-plaid-g-b",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-c004f314-dcc7-49a5-bd2c-d7db9531fc76.jpg?v=1793022567",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-1e488567-a6d9-4aaf-997c-d36d2dfc4d58.jpg?v=1793022567",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-04ebb581-928f-43f0-9713-c8bf74aba8e4.jpg?v=1793022567",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7bd97b40-d045-4535-8cdc-c9cd221c4891.jpg?v=1793022567"
+   ],
+   "text": "מכנס מבד כותנה אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-c004f314-dcc7-49a5-bd2c-d7db9531fc76.jpg?v=1793022567"
+  },
+  {
+   "job": "shilav.co.il|8844992774313",
+   "brand": "Shilav",
+   "name": "מכנסיים מחוייטים בתכלת",
+   "colour": "שחור",
+   "colours": [
+    "שחור",
+    "שחור"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 99.9,
+   "currency": "",
+   "link": "https://www.shilav.co.il/products/מכנסיים-ארוכים-121",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700311263_32700332761-D_fdb26c94-15ed-4105-a17a-df55cff5eabe.jpg?v=1786605999",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700311263_32700332761-A_ce3eb0d0-fd21-426a-a71b-e502ce0d11b1.jpg?v=1786605999",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700332761-A.jpg?v=1786541713",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700332761-B.jpg?v=1786541715",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700332761-C.jpg?v=1786541719"
+   ],
+   "text": "מכנסיים ארוכים ומחוייטים בגוון תכלת עם לולאות לחגורה כיסים כפתור עץ ומותן אלסטית להלבשה קלה. עשויים מבד איכותי ונעים 100% כותנה",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700332761-A.jpg?v=1786541713"
+  },
+  {
+   "job": "campystreet.com|15418692272434",
+   "brand": "Campy",
+   "name": "PANTS- Toy G&B",
+   "colour": "",
+   "colours": [
+    ""
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "",
+   "price": 99.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/pants-toy-g-b",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-3fae12ad-1650-4797-b3d9-20157375467a.jpg?v=1791466241",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-b128d79b-c414-4a11-8aa2-b3a26d6ccb14.jpg?v=1791466241",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-bca261fb-ca53-46fe-8cdb-b131cabb4889.jpg?v=1791466241",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-5759a416-2fc0-48ed-9733-2fa13dd28b13.jpg?v=1791466241"
+   ],
+   "text": "מכנס סטרצי נוח במיוחד יושב טיל על הגוף מתאים לכל לוק למי שמחפש נוחות וסטייל\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-3fae12ad-1650-4797-b3d9-20157375467a.jpg?v=1791466241"
+  },
+  {
+   "job": "twentyfourseven.co.il|10422950887740",
+   "brand": "TwentyFourSeven",
+   "name": "ג'ינס ברל גל",
+   "colour": "חום",
+   "colours": [
+    "חום"
+   ],
+   "category": "LONG JEANS",
+   "composition": "100% Cotton",
+   "price": 249.9,
+   "currency": "ILS",
+   "link": "https://twentyfourseven.co.il/products/617460034",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617460034-2.jpg?v=1787657291",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617460034-1.jpg?v=1787657289",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617460034-3.jpg?v=1787657292",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617460034-4.jpg?v=1787657294"
+   ],
+   "text": "מכנסי ג'ינס ארוכים בגזרת בלון עם חתכים, 5 כיסים וסגירת כפתורים ורוכסן.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617460034-1.jpg?v=1787657289"
+  },
+  {
+   "job": "campystreet.com|15418691191090",
+   "brand": "Campy",
+   "name": "Shirt- Santos Green",
+   "colour": "Green",
+   "colours": [
+    "White",
+    "Green"
+   ],
+   "category": "Shirts",
+   "composition": "",
+   "price": 89.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/shirt-santos-green",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-65ad577a-76a9-4345-8053-3ccd5c1e1072.jpg?v=1791465785",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-7485d0fd-7db0-4719-b155-5e74feac4e56.jpg?v=1791465785",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-81531a3a-e19e-4254-9bb0-c733959b84f7.jpg?v=1791465785",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-57fa3a06-a0fd-400d-870b-8666d46380f0.jpg?v=1791465785"
+   ],
+   "text": "מכופתרת מבד כותנה בד אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-65ad577a-76a9-4345-8053-3ccd5c1e1072.jpg?v=1791465785"
+  },
+  {
+   "job": "campystreet.com|15414463168818",
+   "brand": "Campy",
+   "name": "T-shirt- Oversize 00 Blue Miliatry",
+   "colour": "Blue",
+   "colours": [
+    "Blue"
+   ],
+   "category": "T-SHIRTS",
+   "composition": "",
+   "price": 199.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/t-shirt-oversize-00-blue-miliatry",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-067d1a50-da1f-402e-96a3-a83574bd4574.jpg?v=1791288945",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-f452ba60-a77f-4d17-bdc1-52fdcd76e3df.jpg?v=1791288945",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ee7734bb-f97d-4e24-ac1c-89619a909ca9.jpg?v=1791288945",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-48cd1f08-7760-4ffe-8112-6b56c7168ae1.jpg?v=1791288946"
+   ],
+   "text": "חולצת אוברסייז , משתלבת עם כל לוק\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-067d1a50-da1f-402e-96a3-a83574bd4574.jpg?v=1791288945"
+  },
+  {
+   "job": "campystreet.com|15450903773490",
+   "brand": "Campy",
+   "name": "Short - Plaid B&W",
+   "colour": "",
+   "colours": [
+    "",
+    ""
+   ],
+   "category": "WOVEN SHORTS",
+   "composition": "",
+   "price": 79.0,
+   "currency": "",
+   "link": "https://campystreet.com/products/short-plaid-b-w-1",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-4d1e9396-ad10-4060-8fb3-a32e067b0b6a.jpg?v=1793023188",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-c0bc2ff4-9e35-4b1e-9c92-3da71f5c68ae.jpg?v=1793023189",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-53aa3c9b-ed3f-42af-80f2-86780a817e8f.jpg?v=1793023188",
+    "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-ffcfb6da-cb47-47c0-ab6d-12dcfc7ba6be.jpg?v=1793023189"
+   ],
+   "text": "מכנס מבד כותנה אוורירי ונוח\n\nהתמונות להמחשה בלבד. ייתכנו הבדלים קלים בגוון הצבע בין התמונה למוצר בפועל",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0712/7472/5682/files/drive-4d1e9396-ad10-4060-8fb3-a32e067b0b6a.jpg?v=1793023188"
+  },
+  {
+   "job": "shilav.co.il|8845003423913",
+   "brand": "Shilav",
+   "name": "מכנסי קורדרוי בהדפס פרחוני",
+   "colour": "שחור",
+   "colours": [
+    "שחור"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 89.9,
+   "currency": "",
+   "link": "https://www.shilav.co.il/products/מכנסיים-53",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700747556_32700746556-A_baf82c62-524a-46c1-ba3e-fdfa07ce964b.jpg?v=1786608727",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700746556-A.jpg?v=1784544177",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700746556-B.jpg?v=1784544181",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700746556-C.jpg?v=1784544184"
+   ],
+   "text": "מכנסיים ארוכים באפקט קורדרוי ובהדפס פרחוני מדליק בגוון סגול מעושן בשילוב מותן אלסטית כיסים ופאטץ' אחורי יפהפה עשוי קרושה. עשוי בד איכותי 100% כותנה.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700746556-A.jpg?v=1784544177"
+  },
+  {
+   "job": "twentyfourseven.co.il|10483813810492",
+   "brand": "TwentyFourSeven",
+   "name": "ג'ינס בלון בל",
+   "colour": "כחול ג'ינס",
+   "colours": [
+    "כחול ג'ינס"
+   ],
+   "category": "LONG JEANS",
+   "composition": "85% Cotton · 13% Polyester · 2% Viscose",
+   "price": 199.9,
+   "currency": "ILS",
+   "link": "https://twentyfourseven.co.il/products/617459420",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-1.jpg?v=1793868889",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-2_11853b94-6275-4506-ad47-7ea04039a19d.jpg?v=1792307750",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-3_2d019555-dbe6-43bb-b194-6d7353dec9c3.jpg?v=1792307759",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-4_bd5f3f99-1c6d-4997-baea-93b845842cef.jpg?v=1792307765",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-5_87d66356-4926-45f2-ad03-d66217750041.jpg?v=1792307774",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-6_5416bb04-5247-4551-b8c1-c51ef04c1ae9.jpg?v=1793869357",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-6.jpg?v=1792307780",
+    "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-1.jpg?v=1792888550"
+   ],
+   "text": "מכנסי ג'ינס ארוכים בגזרת בלון עם 5 כיסים, תיקתקים בסיומת הרגל וסגירת כפתור ורוכסן.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0949/1936/0828/files/617459420-4_bd5f3f99-1c6d-4997-baea-93b845842cef.jpg?v=1792307765"
+  },
+  {
+   "job": "sebo-studio.com|8086249635902",
+   "brand": "SEBO",
+   "name": "Tailored Cotton Blend Pants",
+   "colour": "חום",
+   "colours": [
+    "חום",
+    ""
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "60% Cotton · 40% Polyester",
+   "price": 349.9,
+   "currency": "",
+   "link": "https://sebo-studio.com/products/מכנסיים-מחויטים-בגזרה-ישרה-1",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_1.jpg?v=1794260479",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_1.jpg?v=1793828503",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_2.jpg?v=1793828502",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_3.jpg?v=1793828502",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_4.jpg?v=1793828503",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_5.jpg?v=1793828503",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_6.jpg?v=1793828502",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_1.jpg?v=1793309950"
+   ],
+   "text": "מכנסיים בגזרה ישרה עם קפלים קדמיים עמוקים וסילואט רחב ומאוזן.\nעשויים מבד קליל עם גימור נקי ותנועה טבעית.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5D851C5_1.jpg?v=1794260479"
+  },
+  {
+   "job": "ainker.com|9602420605096",
+   "brand": "AINKER",
+   "name": "Light Blue 1150 Jacket Jeans",
+   "colour": "Light Blue",
+   "colours": [
+    "Blue",
+    "LIGHT BLUE"
+   ],
+   "category": "LONG JEANS",
+   "composition": "100% Cotton",
+   "price": 700.0,
+   "currency": "",
+   "link": "https://ainker.com/products/light-blue-1150-jacket-jeans",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.1_15.jpg?v=1789486048",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/10_20.jpg?v=1789486048",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/11_23_331e2513-1051-481a-a21b-eefa1312afd1.jpg?v=1789486048",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/12_23_feb3d871-bde3-40ed-941c-a78aaedeaf77.jpg?v=1789486048",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1_26_f2912af8-1077-40c2-9def-9fdef84b40f0.jpg?v=1789486048",
+    "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.3_2.jpg?v=1789486049"
+   ],
+   "text": "Crafted from premium washed denim in a striking two-tone finish, this trucker jacket pairs a sun-bleached light-blue body with rich indigo accents at the collar and pockets.\n\nRaw, frayed hems and antique-finish snap buttons lend an effortless, lived-in edge to the refined silhouette. Finished with the signature AINKER leather patch at the inner collar.\n\nAvailable in Light Blue and Dark Blue.\n\nShown in size L on a 1.88m model.\n: Crafted from premium washed denim in a striking two-tone finish, this trucker jacket pairs a sun-bleached light-blue body with rich indigo accents at the collar and pockets.\nRaw, frayed hems and antique-finish snap buttons lend an effortless, lived-in edge to the refined silhouette. Finished with the signature AINKER leather patch at the inner collar.\nAvailable in Light Blue and Dark Blue.\nShown in size L on a 1.88m model.\n: 100% premium cotton",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0619/6602/4872/files/1.1_15.jpg?v=1789486048"
+  },
+  {
+   "job": "sebo-studio.com|8086414426174",
+   "brand": "SEBO",
+   "name": "Drill Baggy Fit Trousers",
+   "colour": "חום",
+   "colours": [
+    "חום"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "100% Cotton",
+   "price": 449.9,
+   "currency": "",
+   "link": "https://sebo-studio.com/products/מכנסי-בד-171",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_1.jpg?v=1793398049",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_2.jpg?v=1793398048",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_3.jpg?v=1793398050",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_4.jpg?v=1793398048",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_5.jpg?v=1793398050",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_6.jpg?v=1793398049",
+    "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_7.jpg?v=1793398049"
+   ],
+   "text": "מכנס רחב בגזרת באגי אופנתית העשוי מבד דריל (Drill) עמיד ואיכותי. מתאפיין בחיתוכי תפירה (פאנלים) ייחודיים המעניקים לו מראה אורבני וסטריט-סטיי ל מחוספס.",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0579/6269/2670/files/5F811C5_2.jpg?v=1793398048"
+  },
+  {
+   "job": "yn10565.com|27238·BLACK",
+   "brand": "YN® 10.56.5",
+   "name": "P00118 CORDUROY DRAWSTRING PANTS",
+   "colour": "BLACK",
+   "colours": [
+    "BLACK",
+    "BROWN",
+    "CAMEL",
+    "STONE"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "",
+   "price": 299.0,
+   "currency": "ILS",
+   "link": "https://yn10565.com/product/p00118-corduroy-drawstring-pants/",
+   "photos": [
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-3.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-5.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-4.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-1.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-9.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-7.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-8.png",
+    "https://yn10565.com/wp-content/uploads/2025/10/P00118-10.png"
+   ],
+   "text": "CORDUROY DRAWSTRING PANTS\nמכנסיים בגזרה ישרה ונינוחה שיושבים מעולה על הגוף. עשויים מבד קורדרוי איכותי, רך ומחמם שמתאים בול לעונה הקרה. כוללים גומי במותן עם שרוך קשירה, כיסי צד נוחים ופסי קנט קונטרסטיים לאורך הצדדים והכיסים האחוריים. פריט אורבני ייחודי שמשלב נוחות מרבית עם מראה מוקפד ליום-יום.\n: CORDUROY DRAWSTRING PANTS\nמכנסיים בגזרה ישרה ונינוחה שיושבים מעולה על הגוף\n. עשויים מבד קורדרוי איכותי, רך ומחמם שמתאים בול לעונה הקרה\n. כוללים גומי במותן עם שרוך קשירה, כיסי צד נוחים ופסי קנט קונטרסטיים לאורך הצדדים והכיסים האחוריים\n. פריט אורבני ייחודי שמשלב נוחות מרבית עם מראה מוקפד ליום-יום",
+   "measure_photo": "https://yn10565.com/wp-content/uploads/2025/10/P00118-9.png"
+  },
+  {
+   "job": "shilav.co.il|8845005226153",
+   "brand": "Shilav",
+   "name": "מכנסיים",
+   "colour": "שחור",
+   "colours": [
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור",
+    "שחור"
+   ],
+   "category": "WOVEN TROUSERS",
+   "composition": "",
+   "price": 64.9,
+   "currency": "",
+   "link": "https://www.shilav.co.il/products/מכנסיים-62",
+   "photos": [
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700790743-_-32700797743---B_ba8c7ff3-739a-49da-9920-424db3c43fdf.jpg?v=1788274839",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700790743-_-32700797743---A_acff0563-787c-4417-af22-bc8b9453bf22.jpg?v=1788274839",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700795743-_-32700797743---C_46198f17-9fa1-4aa8-828e-8509876ec66c.jpg?v=1788274938",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700795743-_-32700797743---A_3e4c7536-9c79-42cf-86c2-4952c84c36a5.jpg?v=1788274938",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/32700795743-_-32700797743---B_9605121c-0246-432b-ad4d-4e91e22fe0ba.jpg?v=1788274938",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700797743-A.jpg?v=1789645570",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700797743-C.jpg?v=1789645570",
+    "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700797743-B.jpg?v=1789645570"
+   ],
+   "text": "",
+   "measure_photo": "https://cdn.shopify.com/s/files/1/0666/5532/2281/files/XL-32700797743-A.jpg?v=1789645570"
   }
  ]
 }
